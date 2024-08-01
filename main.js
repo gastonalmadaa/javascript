@@ -1,53 +1,55 @@
 // USUARIO
-const nameuser = prompt("Hi! What is your name?:");
+function UserData() {
+const User = prompt("Hi! What is your name?");
+alert ("¡Welcome " + User + "!");
+console.log ("Welcome", User);
 
-let edad = parseInt(prompt("¿How old are you " + nameuser + "?"));
-if (edad >= 18);
-else {alert ("Please, only purchase if you have adult supervision")}
+const Age = prompt ("How old are You " + User + "?");
+if (Age < 18){
+    alert (("Please ") + User + (", only purchase if you have adult supervision!"));
+    console.log ("Minors may not purchase without adult supervision.");
+}else {
+    alert (("Hi ") + User + ("! These gears will take your game to the next level"));
+    console.log ("Adults can purchase without restrictions.");
+}
+}
+UserData ();
 
+//ARRAYS
+brands = ["Razer", "Logitech", "Corsair", "Redragon"]
 
-// PRODUCTOS Y PRECIO
+// PRODUCTO Y PRECIO
 /* KEYBOARDS */
-let keyboardrazer1 =    {nombre: "Ornata V3",
-    precio: 69.99};
-console.log(keyboardrazer1);
-
-let keyboardrazer2 =    {nombre: "Blackwidow V3",
-    precio: 179.99};
-console.log(keyboardrazer2);
-
+let Keyboards = "Ornata V3 - $69.99"
 /* MICES */
-let micerazer1 =    {nombre: "Viper Ultimate",
-precio: 159.99};
-console.log(micerazer1);
-
-let micerazer2 =    {nombre: "Basilisk V3 Pro",
-precio: 159.99};
-console.log(micerazer2);
-
+let Mices = "Viper Ultimat - $159.99"
 /* AUDIO */
-let audiorazer1 =   {nombre: "Krakenk V3 Pro",
-precio: 79.99}
-console.log(audiorazer1)
-
-let audiorazer2 =   {nombre: "Nommo Speakers V2 Pro",
-precio: 449.99}
-console.log(audiorazer2)
-
+let Sound = "Krakenk V3 Pro - $79.99"
 /* MATS */
-let matrazer1 =     {nombre: "Atlas",
-precio: 99.99}
-console.log(matrazer1)
-
-let matrazer2 =     {nombre: "Goliathus Chroma™",
-precio: 39.99}
-console.log(matrazer2)
-
+let Mats = "Atlas - $99.99"
 /* CHAIRS */
-let chairrazer1 =     {nombre: "Iskur",
-precio: 649.99}
-console.log(chairrazer1)
+let Chairs = "Iskur - $649.99"
 
-let chairrazer2 =     {nombre: "Fujin Pro",
-precio: 1049.99}
-console.log(chairrazer2)
+// SWICTH
+let Products = prompt ("What are you looking for among these options: Keyboards, Mice, Sound, Mats, Chairs")
+
+switch (Products) {
+    case "Keyboards":
+        alert (Keyboards);
+        break;
+    case "Mices":
+        alert (Mices);
+        break;
+    case "Sound":
+        alert (Sound);
+        break;
+    case "Mats":
+        alert (Mats);
+        break;
+    case "Chairs":
+        alert (Chairs);
+        break;
+    default:
+        alert ("Please enter one of these options: Keyboards, Mices, Sound, Mats, Chairs")
+        break;
+}
