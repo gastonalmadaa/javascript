@@ -53,3 +53,4 @@ switch (Products) {
         alert ("Please enter one of these options: Keyboards, Mices, Sound, Mats, Chairs")
         break;
 }
+
